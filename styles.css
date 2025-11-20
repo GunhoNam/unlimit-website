@@ -1,0 +1,46 @@
+:root{
+  --bg1: linear-gradient(135deg,#0f172a 0%, #071024 40%);
+  --accent: linear-gradient(90deg,#ff7a18,#af002d 70%);
+  --glass: rgba(255,255,255,0.04);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
+             radial-gradient(circle at 90% 90%, rgba(255,255,255,0.02), transparent 10%),
+             var(--bg1);
+  color:#e6eef8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.hero{min-height:80vh; display:flex; align-items:center; justify-content:center; padding:24px; width:100%}
+.card{
+  width:100%; max-width:760px; padding:36px; border-radius:18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+  text-align:center;
+}
+.logo{font-weight:900; letter-spacing:1px; margin:0; font-size:36px; background:var(--accent); -webkit-background-clip:text; background-clip:text; color:transparent}
+.lead{margin:12px 0 20px; font-size:18px; color:rgba(230,238,248,0.9)}
+.countdown{font-weight:700; margin:10px 0 20px; font-size:20px}
+.notify{display:flex; gap:8px; justify-content:center; align-items:center; margin-top:8px}
+.notify input{
+  padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.06);
+  background:transparent; color:inherit; min-width:220px; outline:none;
+}
+.notify button{
+  padding:12px 18px; border-radius:10px; border:0; background:linear-gradient(90deg,#ff7a18,#af002d); color:white; font-weight:700; cursor:pointer;
+}
+.small{color:rgba(230,238,248,0.7); margin-top:12px}
+.footer{margin-top:18px; color:rgba(230,238,248,0.35); font-size:13px}
+@media (max-width:520px){
+  .card{padding:20px;border-radius:12px}
+  .logo{font-size:28px}
+  .lead{font-size:15px}
+}
